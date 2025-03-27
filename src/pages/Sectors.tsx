@@ -1,4 +1,3 @@
-
 import Layout from '@/components/Layout';
 import SectionContainer from '@/components/SectionContainer';
 import SectionTitle from '@/components/SectionTitle';
@@ -13,7 +12,7 @@ const Sectors = () => {
       icon: <Building className="h-10 w-10" />,
       title: "Built Environment",
       description: "Transforming heating and cooling in commercial and residential buildings through innovative thermal control systems.",
-      image: "/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png",
+      image: "/assets/images/sectors/built-environment.png",
       link: "/technology#built-environment",
       color: "bg-botanicRed text-white"
     },
@@ -21,7 +20,7 @@ const Sectors = () => {
       icon: <Truck className="h-10 w-10" />,
       title: "Transport & Refrigeration",
       description: "Revolutionary solid-state technology for refrigerated transport, replacing diesel-powered units with environmentally friendly alternatives.",
-      image: "/lovable-uploads/be3fbece-99a1-46db-bcfe-136103aa1f65.png",
+      image: "/assets/images/sectors/transport-refrigeration.png",
       link: "/technology#cold-chain",
       color: "bg-botanicBlue text-white"
     },
@@ -29,7 +28,7 @@ const Sectors = () => {
       icon: <Leaf className="h-10 w-10" />,
       title: "Agriculture",
       description: "Energy-efficient thermal management solutions for controlled environment agriculture and crop production.",
-      image: "/lovable-uploads/0c84872f-d828-46c1-830f-f503220c2ec4.png",
+      image: "/assets/images/sectors/agricultor.png",
       link: "/technology#agri-tech",
       color: "bg-botanicPurple text-white"
     },
@@ -37,7 +36,7 @@ const Sectors = () => {
       icon: <Plane className="h-10 w-10" />,
       title: "Aviation",
       description: "Advanced thermal management for aircraft engines, enhancing reliability while reducing fuel consumption.",
-      image: "/lovable-uploads/0c84872f-d828-46c1-830f-f503220c2ec4.png",
+      image: "/assets/images/sectors/aviation.png",
       link: "/technology#aviation",
       color: "bg-botanicDark text-white"
     },
@@ -45,7 +44,7 @@ const Sectors = () => {
       icon: <Home className="h-10 w-10" />,
       title: "Residential",
       description: "Innovative solutions for home heating, cooling, and water systems that eliminate the need for traditional boilers.",
-      image: "/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png",
+      image: "/assets/images/sectors/residential.jpg",
       link: "/technology#thermal-taps",
       color: "bg-botanicRed text-white"
     },
@@ -53,7 +52,7 @@ const Sectors = () => {
       icon: <Pill className="h-10 w-10" />,
       title: "Medical",
       description: "Reliable cooling solutions for medical applications, including vaccine transport and storage in challenging environments.",
-      image: "/lovable-uploads/be3fbece-99a1-46db-bcfe-136103aa1f65.png",
+      image: "/assets/images/sectors/medical.jpeg",
       link: "/technology#cold-chain",
       color: "bg-botanicBlue text-white"
     }
@@ -102,6 +101,8 @@ const Sectors = () => {
                   src={sector.image}
                   alt={sector.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6">
@@ -148,9 +149,11 @@ const Sectors = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-xl animate-fade-in">
             <img 
-              src="/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png" 
+              src="/assets/images/sectors/transport-refrigeration.png"
               alt="Global Impact" 
-              className="w-full h-auto"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

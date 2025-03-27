@@ -1,4 +1,3 @@
-
 import { ArrowRight, Zap, Leaf, Thermometer, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -12,24 +11,24 @@ import { cn } from '@/lib/utils';
 const Index = () => {
   const features = [
     {
-      icon: <Zap className="h-6 w-6 text-botanicRed" />,
-      title: "Disruptive Innovation",
-      description: "Revolutionary thermoelectric systems that replace diesel-powered refrigeration."
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/speedometer.svg')" }} />,
+      title: "Perform better",
+      description: "Our innovative thermal control systems deliver superior performance compared to traditional solutions."
     },
     {
-      icon: <Leaf className="h-6 w-6 text-botanicBlue" />,
-      title: "Sustainable Solutions",
-      description: "Significantly reduce emissions and create sustainable cold chains globally."
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/coins.svg')" }} />,
+      title: "Cost less",
+      description: "Reduce operational costs while improving efficiency and environmental impact."
     },
     {
-      icon: <Thermometer className="h-6 w-6 text-botanicPurple" />,
-      title: "Advanced Cooling",
-      description: "Next-generation thermal control for buildings, transport, and agriculture."
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/brain.svg')" }} />,
+      title: "Be smarter",
+      description: "Intelligent systems that adapt and optimize for maximum efficiency and performance."
     },
     {
-      icon: <Globe className="h-6 w-6 text-botanicBlue" />,
-      title: "Global Impact",
-      description: "Bringing reliable cooling to challenging regions like Sub-Saharan Africa."
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/recycle.svg')" }} />,
+      title: "More sustainable",
+      description: "Environmentally conscious solutions that reduce carbon footprint and promote sustainability."
     }
   ];
 
@@ -37,19 +36,19 @@ const Index = () => {
     {
       title: "Built Environment",
       description: "Revolutionary thermal control systems for residential and commercial buildings, eliminating the need for traditional HVAC methods.",
-      image: "/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png",
+      image: "/assets/images/index/thermal.jpg",
       link: "/technology#built-environment"
     },
     {
       title: "Cold Chain Distribution",
       description: "Advanced thermoelectric technology for refrigeration units that are lighter, more efficient, and environmentally friendly.",
-      image: "/lovable-uploads/be3fbece-99a1-46db-bcfe-136103aa1f65.png",
+      image: "/assets/images/index/coldchain.jpg",
       link: "/technology#cold-chain"
     },
     {
       title: "Agri-Tech Solutions",
       description: "Sustainable cooling systems for agriculture, enabling 24/7 energy efficient thermal management for crop production.",
-      image: "/lovable-uploads/0c84872f-d828-46c1-830f-f503220c2ec4.png",
+      image: "/assets/images/index/agri.png",
       link: "/technology#agri-tech"
     }
   ];
@@ -59,11 +58,17 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img 
-            src="/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png" 
-            alt="Sustainable Future" 
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            preload="none"
             className="w-full h-full object-cover"
-          />
+            poster="/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png"
+          >
+            <source src="/assets/videos/index/hero-vid.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         
@@ -136,15 +141,15 @@ const Index = () => {
                 <div 
                   key={index} 
                   className={cn(
-                    "glass-card p-6 animate-fade-in",
+                    "glass-card p-8 animate-fade-in hover:shadow-lg transition-all duration-300",
                     `delay-[${index * 100}ms]`
                   )}
                 >
-                  <div className="mb-4 p-3 inline-flex items-center justify-center rounded-lg bg-foreground/5">
+                  <div className="mb-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-foreground/70">{feature.description}</p>
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-foreground/70 text-lg">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -174,7 +179,7 @@ const Index = () => {
       {/* Image Section */}
       <SectionContainer>
         <ImageSection 
-          image="/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png"
+          image="/assets/images/index/thermaltap.jpg"
           alt="Thermal Taps and Valves"
         >
           <div className="title-chip animate-fade-in-right">Featured Technology</div>
@@ -198,7 +203,7 @@ const Index = () => {
       <SectionContainer className="bg-botanicDark text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png" 
+            src="/assets/images/index/call-to-action.jpg" 
             alt="Nature background" 
             className="w-full h-full object-cover"
           />
@@ -231,31 +236,34 @@ const Index = () => {
           subtitle="We work with forward-thinking organizations to accelerate the development and adoption of our sustainable technologies."
         />
         
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
           <img 
-            src="/lovable-uploads/528c9074-b08e-4e9f-af0a-bd008e77c30a.png" 
-            alt="Botanic Energy" 
-            className="h-12 md:h-16 w-auto opacity-70 hover:opacity-100 transition-opacity animate-fade-in"
+            src="/assets/images/general/collaborator-1.png"
+            alt="Oxford University Innovation"
+            className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+            loading="lazy"
+            decoding="async"
           />
           <img 
-            src="/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png" 
-            alt="Partner 1" 
-            className="h-12 md:h-16 w-auto opacity-70 hover:opacity-100 transition-opacity animate-fade-in"
+            src="/assets/images/general/collaborator-2.png"
+            alt="Innovate UK"
+            className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+            loading="lazy"
+            decoding="async"
           />
           <img 
-            src="/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png" 
-            alt="Partner 2" 
-            className="h-12 md:h-16 w-auto opacity-70 hover:opacity-100 transition-opacity animate-fade-in"
+            src="/assets/images/general/collaborator-3.png"
+            alt="Department for Transport"
+            className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+            loading="lazy"
+            decoding="async"
           />
           <img 
-            src="/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png" 
-            alt="Partner 3" 
-            className="h-12 md:h-16 w-auto opacity-70 hover:opacity-100 transition-opacity animate-fade-in"
-          />
-          <img 
-            src="/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png" 
-            alt="Partner 4" 
-            className="h-12 md:h-16 w-auto opacity-70 hover:opacity-100 transition-opacity animate-fade-in"
+            src="/assets/images/general/collaborator-4.png"
+            alt="Advanced Propulsion Centre UK"
+            className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </SectionContainer>
