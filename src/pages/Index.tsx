@@ -11,22 +11,22 @@ import { cn } from '@/lib/utils';
 const Index = () => {
   const features = [
     {
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/speedometer.svg')" }} />,
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/speedometer.svg')" }} />,
       title: "Perform better",
       description: "Our innovative thermal control systems deliver superior performance compared to traditional solutions."
     },
     {
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/coins.svg')" }} />,
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/coins.svg')" }} />,
       title: "Cost less",
       description: "Reduce operational costs while improving efficiency and environmental impact."
     },
     {
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/brain.svg')" }} />,
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/brain.svg')" }} />,
       title: "Be smarter",
       description: "Intelligent systems that adapt and optimize for maximum efficiency and performance."
     },
     {
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/images/index/recycle.svg')" }} />,
+      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/recycle.svg')" }} />,
       title: "More sustainable",
       description: "Environmentally conscious solutions that reduce carbon footprint and promote sustainability."
     }
@@ -36,19 +36,19 @@ const Index = () => {
     {
       title: "Built Environment",
       description: "Revolutionary thermal control systems for residential and commercial buildings, eliminating the need for traditional HVAC methods.",
-      image: "/assets/images/index/thermal.jpg",
+      image: "/botanic-website/assets/images/index/thermal.jpg",
       link: "/technology#built-environment"
     },
     {
       title: "Cold Chain Distribution",
       description: "Advanced thermoelectric technology for refrigeration units that are lighter, more efficient, and environmentally friendly.",
-      image: "/assets/images/index/coldchain.jpg",
+      image: "/botanic-website/assets/images/index/coldchain.jpg",
       link: "/technology#cold-chain"
     },
     {
       title: "Agri-Tech Solutions",
       description: "Sustainable cooling systems for agriculture, enabling 24/7 energy efficient thermal management for crop production.",
-      image: "/assets/images/index/agri.png",
+      image: "/botanic-website/assets/images/index/agri.png",
       link: "/technology#agri-tech"
     }
   ];
@@ -65,9 +65,9 @@ const Index = () => {
             playsInline
             preload="none"
             className="w-full h-full object-cover"
-            poster="/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png"
+            poster="/botanic-website/assets/images/index/hero-poster.jpg"
           >
-            <source src="/assets/videos/index/hero-vid.mp4" type="video/mp4" />
+            <source src="/botanic-website/assets/videos/index/hero-vid.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
@@ -203,7 +203,7 @@ const Index = () => {
       <SectionContainer className="bg-botanicDark text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="/assets/images/index/call-to-action.jpg" 
+            src="/botanic-website/assets/images/index/call-to-action.jpg" 
             alt="Nature background" 
             className="w-full h-full object-cover"
           />
@@ -238,28 +238,28 @@ const Index = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
           <img 
-            src="/assets/images/general/collaborator-1.png"
+            src="/botanic-website/assets/images/general/collaborator-1.png"
             alt="Oxford University Innovation"
             className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
             loading="lazy"
             decoding="async"
           />
           <img 
-            src="/assets/images/general/collaborator-2.png"
+            src="/botanic-website/assets/images/general/collaborator-2.png"
             alt="Innovate UK"
             className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
             loading="lazy"
             decoding="async"
           />
           <img 
-            src="/assets/images/general/collaborator-3.png"
+            src="/botanic-website/assets/images/general/collaborator-3.png"
             alt="Department for Transport"
             className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
             loading="lazy"
             decoding="async"
           />
           <img 
-            src="/assets/images/general/collaborator-4.png"
+            src="/botanic-website/assets/images/general/collaborator-4.png"
             alt="Advanced Propulsion Centre UK"
             className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
             loading="lazy"

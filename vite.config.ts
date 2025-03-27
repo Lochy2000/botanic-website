@@ -5,7 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/botanic-energy-website/",
+  base: "/botanic-website/",
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    emptyOutDir: true,
+    sourcemap: true,
+  },
   server: {
     host: "::",
     port: 8080,
