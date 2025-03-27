@@ -179,7 +179,7 @@ const Index = () => {
       {/* Image Section */}
       <SectionContainer>
         <ImageSection 
-          image="/assets/images/index/thermaltap.jpg"
+          image="/botanic-website/assets/images/index/thermaltap.jpg"
           alt="Thermal Taps and Valves"
         >
           <div className="title-chip animate-fade-in-right">Featured Technology</div>
