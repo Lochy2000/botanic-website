@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
 
@@ -12,9 +11,9 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-6">
               <img 
-                src="/lovable-uploads/528c9074-b08e-4e9f-af0a-bd008e77c30a.png" 
+                src="/assets/images/logo/logo.png" 
                 alt="Botanic Energy" 
-                className="h-10 w-auto"
+                className="h-16 sm:h-20 w-auto"
               />
             </Link>
             <p className="text-white/70 mb-6 max-w-sm">

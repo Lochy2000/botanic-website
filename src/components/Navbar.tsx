@@ -37,14 +37,17 @@ const Navbar = () => {
           <img 
             src="/assets/images/logo/logo.png" 
             alt="Botanic Energy" 
-            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
+            className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
             loading="eager"
             decoding="async"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className={cn(
+          "hidden md:flex items-center space-x-8",
+          !isScrolled && "text-white"
+        )}>
           <Link to="/" className={cn("nav-link", isActive('/') && "text-primary after:scale-x-100")}>
             Home
           </Link>
@@ -65,25 +68,31 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center">
+        <div className={cn(
+          "hidden md:flex items-center",
+          !isScrolled && "text-white"
+        )}>
           <button 
             aria-label="Search"
-            className="p-2 rounded-full hover:bg-black/5 transition-colors"
+            className="p-2 rounded-full hover:bg-white/10 transition-colors"
           >
-            <Search className="h-5 w-5 text-foreground/70" />
+            <Search className="h-5 w-5" />
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 rounded-full hover:bg-black/5 transition-colors"
+          className={cn(
+            "md:hidden p-2 rounded-full transition-colors",
+            isScrolled ? "hover:bg-black/5" : "text-white hover:bg-white/10"
+          )}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-foreground" />
+            <X className="h-6 w-6" />
           ) : (
-            <Menu className="h-6 w-6 text-foreground" />
+            <Menu className="h-6 w-6" />
           )}
         </button>
       </div>
