@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), ''); 
 
   // Determine base path based on the DEPLOY_TARGET environment variable
-  const base = env.DEPLOY_TARGET === 'ghpages' ? '/bontaic-energy-website/' : '/';
+  const base = env.DEPLOY_TARGET === 'ghpages' ? '/botanic-website/' : '/';
 
   return {
     base: base,
