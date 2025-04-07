@@ -46,6 +46,9 @@ jobs:
           # Ensure DEPLOY_TARGET is set for the build step
           DEPLOY_TARGET: ghpages
 
+      - name: Verify Build Output
+        run: ls -R ./docs/assets
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         # No configuration needed if building to standard 'docs' or root
