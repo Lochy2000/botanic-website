@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
-            src="/assets/images/logo/logo.png" 
+            src="/botanic-website/assets/images/logo/logo.png" 
             alt="Botanic Energy" 
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
             loading="eager"
