@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import SectionContainer from '@/components/SectionContainer';
 import SectionTitle from '@/components/SectionTitle';
 import CTA from '@/components/CTA';
-import { Building, Truck, Leaf, Plane, Home, Pill } from 'lucide-react';
+import { Building, Truck, Leaf, Plane, Home, Pill, FlaskConical } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -11,49 +11,49 @@ const Sectors = () => {
     {
       icon: <Building className="h-10 w-10" />,
       title: "Built Environment",
-      description: "Transforming heating and cooling in commercial and residential buildings through innovative thermal control systems.",
-      image: "/assets/images/sectors/built-environment.png",
-      link: "/technology#built-environment",
+      description: "HVAC systems, district heating/cooling, waste heat recovery.",
+      image: "/botanic-website/assets/images/sectors/built-environment.png",
+      link: "/sectors/built-environment",
       color: "bg-botanicRed text-white"
     },
     {
       icon: <Truck className="h-10 w-10" />,
-      title: "Transport & Refrigeration",
-      description: "Revolutionary solid-state technology for refrigerated transport, replacing diesel-powered units with environmentally friendly alternatives.",
-      image: "/assets/images/sectors/transport-refrigeration.png",
-      link: "/technology#cold-chain",
+      title: "Transport Refrigeration",
+      description: "Zero-emission refrigeration for trucks, vans, and containers.",
+      image: "/botanic-website/assets/images/sectors/transport-refrigeration.png",
+      link: "/sectors/transport-refrigeration",
       color: "bg-botanicBlue text-white"
     },
     {
       icon: <Leaf className="h-10 w-10" />,
-      title: "Agriculture",
-      description: "Energy-efficient thermal management solutions for controlled environment agriculture and crop production.",
-      image: "/assets/images/sectors/agricultor.png",
-      link: "/technology#agri-tech",
+      title: "Agri-Tech",
+      description: "Precision temperature control for vertical farming and greenhouses.",
+      image: "/botanic-website/assets/images/sectors/agricultor.png",
+      link: "/sectors/agri-tech",
       color: "bg-botanicPurple text-white"
     },
     {
       icon: <Plane className="h-10 w-10" />,
-      title: "Aviation",
-      description: "Advanced thermal management for aircraft engines, enhancing reliability while reducing fuel consumption.",
-      image: "/assets/images/sectors/aviation.png",
-      link: "/technology#aviation",
+      title: "Aerospace & Defence",
+      description: "Thermal management for avionics, satellites, and military equipment.",
+      image: "/botanic-website/assets/images/sectors/aviation.png",
+      link: "/sectors/aerospace-defence",
       color: "bg-botanicDark text-white"
     },
     {
       icon: <Home className="h-10 w-10" />,
-      title: "Residential",
-      description: "Innovative solutions for home heating, cooling, and water systems that eliminate the need for traditional boilers.",
-      image: "/assets/images/sectors/residential.jpg",
-      link: "/technology#thermal-taps",
+      title: "Residential Heating & Cooling",
+      description: "Efficient and silent home climate control solutions.",
+      image: "/botanic-website/assets/images/sectors/residential.jpg",
+      link: "/sectors/residential",
       color: "bg-botanicRed text-white"
     },
     {
-      icon: <Pill className="h-10 w-10" />,
-      title: "Medical",
-      description: "Reliable cooling solutions for medical applications, including vaccine transport and storage in challenging environments.",
-      image: "/assets/images/sectors/medical.jpeg",
-      link: "/technology#cold-chain",
+      icon: <FlaskConical className="h-10 w-10" />,
+      title: "Medical & Laboratory",
+      description: "Precise temperature control for medical devices and lab equipment.",
+      image: "/botanic-website/assets/images/sectors/medical.jpeg",
+      link: "/sectors/medical-laboratory",
       color: "bg-botanicBlue text-white"
     }
   ];
@@ -149,7 +149,7 @@ const Sectors = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-xl animate-fade-in">
             <img 
-              src="/assets/images/sectors/transport-refrigeration.png"
+              src="/botanic-website/assets/images/sectors/transport-refrigeration.png"
               alt="Global Impact" 
               className="w-full h-auto object-cover"
               loading="lazy"

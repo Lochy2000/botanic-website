@@ -20,9 +20,14 @@ const CTA = ({
       <SectionContainer className="bg-botanicDark text-white py-20">
         <div className="max-w-4xl mx-auto text-center">
           <img 
-            src="/assets/images/logo/logo.png" 
-            alt="Botanic Energy" 
-            className="h-16 mx-auto mb-8"
+            src="/botanic-website/assets/images/logo/logo.png"
+            alt="Botanic Energy Logo"
+            className="absolute top-8 left-8 h-12 w-auto opacity-10"
+          />
+          <img 
+            src="/botanic-website/assets/images/logo/logo.png"
+            alt="Botanic Energy Logo"
+            className="absolute bottom-8 right-8 h-16 w-auto opacity-5 rotate-12"
           />
           <h2 className="section-title mb-6 animate-fade-in">{title}</h2>
           <p className="text-lg md:text-xl text-white/80 mb-10 animate-fade-in">
@@ -43,9 +48,14 @@ const CTA = ({
     <SectionContainer className="bg-botanicLight py-20">
       <div className="max-w-4xl mx-auto text-center">
         <img 
-          src="/assets/images/logo/logo.png" 
-          alt="Botanic Energy" 
-          className="h-16 mx-auto mb-8"
+          src="/botanic-website/assets/images/logo/logo.png"
+          alt="Botanic Energy Logo"
+          className="absolute top-8 left-8 h-12 w-auto opacity-10"
+        />
+        <img 
+          src="/botanic-website/assets/images/logo/logo.png"
+          alt="Botanic Energy Logo"
+          className="absolute bottom-8 right-8 h-16 w-auto opacity-5 rotate-12"
         />
         <h2 className="section-title mb-6 animate-fade-in">{title}</h2>
         <p className="text-lg md:text-xl text-foreground/70 mb-10 animate-fade-in">

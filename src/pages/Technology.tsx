@@ -3,7 +3,7 @@ import SectionContainer from '@/components/SectionContainer';
 import SectionTitle from '@/components/SectionTitle';
 import ImageSection from '@/components/ImageSection';
 import CTA from '@/components/CTA';
-import { Zap, Thermometer, Wind, BarChart } from 'lucide-react';
+import { Zap, Thermometer, Wind, BarChart, ThermometerSun, PackageCheck, Recycle, Waves, ShipWheel } from 'lucide-react';
 
 const Technology = () => {
   const benefits = [
@@ -84,7 +84,7 @@ const Technology = () => {
               className="w-full h-auto"
               poster="/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png"
             >
-              <source src="/assets/videos/technology/solidstate.mp4" type="video/mp4" />
+              <source src="/botanic-website/assets/videos/technology/solidstate.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Technology = () => {
       {/* Built Environment Section */}
       <SectionContainer id="built-environment">
         <ImageSection 
-          image="/assets/images/technology/thermal.jpg"
+          image="/botanic-website/assets/images/technology/thermal.jpg"
           alt="Built Environment"
         >
           <div className="title-chip animate-fade-in-right">Application</div>
@@ -137,7 +137,7 @@ const Technology = () => {
       {/* Cold Chain Section */}
       <SectionContainer id="cold-chain" className="bg-botanicLight">
         <ImageSection 
-          image="/assets/images/technology/coldchain.jpg"
+          image="/botanic-website/assets/images/technology/coldchain.jpg"
           alt="Cold Chain Distribution"
           position="right"
         >
@@ -158,7 +158,7 @@ const Technology = () => {
       {/* Agri-Tech Section */}
       <SectionContainer id="agri-tech">
         <ImageSection 
-          image="/assets/images/technology/thermal.jpg"
+          image="/botanic-website/assets/images/technology/thermal.jpg"
           alt="Agri-Tech Solutions"
         >
           <div className="title-chip animate-fade-in-right">Application</div>
@@ -178,7 +178,7 @@ const Technology = () => {
       {/* Thermal Taps Section */}
       <SectionContainer id="thermal-taps" className="bg-botanicLight">
         <ImageSection 
-          image="/assets/images/technology/thermaltap.jpg"
+          image="/botanic-website/assets/images/technology/thermaltap.jpg"
           alt="Thermal Taps and Valves"
           position="right"
         >
@@ -199,7 +199,7 @@ const Technology = () => {
       {/* Aviation Section */}
       <SectionContainer id="aviation">
         <ImageSection 
-          image="/assets/images/technology/aviation.jpg"
+          image="/botanic-website/assets/images/technology/aviation.jpg"
           alt="Aviation Applications"
         >
           <div className="title-chip animate-fade-in-right">Application</div>

@@ -1,8 +1,8 @@
-
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { cn } from '@/lib/utils';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,6 +10,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const { pathname } = useLocation();
+  const isHomePage = pathname === '/';
   
   // Scroll to top on route change
   useEffect(() => {
@@ -19,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Navbar />
-      <main className="flex-grow pt-20">{children}</main>
+      <main className={cn("flex-grow", !isHomePage && "pt-20")}>{children}</main>
       <Footer />
     </>
   );

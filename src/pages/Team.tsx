@@ -5,46 +5,46 @@ import SectionTitle from '@/components/SectionTitle';
 const Team = () => {
   const teamMembers = [
     {
-      name: "Nick Wyllie",
-      role: "CEO and Founder",
-      image: "/assets/images/team/nick-wyllie.jpg",
-      bio: "Nick Wyllie is an innovator and developer having over 25 years experience in industry and the built environment. A successful entrepreneur responsible for all aspects of project management. Nick has extensive experience as founder and CEO of various companies which has given him hands on experience in managing teams and delivering results. Qualifications include BA (Hons) in Business, Technical Diploma in Building and Civil Engineering, professional qualifications in Marketing with a background in Environmental studies. Passionate about the environment, Nick has patents on ten innovations relating to thermodynamics, vehicle cooler/heaters, heat transfer, active claddings, circuits, assemblies, heat recovery arrays and energy generation."
+      name: "Professor Nick Wyllie OBE FREng FRS",
+      title: "Director, Co-Founder & CTO",
+      image: "/botanic-website/assets/images/team/nick-wyllie.jpg",
+      bio: "Leading expert in thermodynamics and energy systems."
     },
     {
-      name: "Professor Kam Chana",
-      role: "Chief Technical Officer",
-      image: "/assets/images/team/kam-chana.jpg",
-      bio: "Professor Kam Chana, Commercial and Technical Director OTRF, Fellow of St Anne's College, University of Oxford, Department of Engineering Science is the Chief Technical Officer at Botanic Energy. He joined Oxford University in 2010 following 22 years at the Ministry of Defence and QinetiQ where he held the position of Head of Instrumentation and Experimental Programmes and was a QinetiQ Fellow. At Oxford he leads the activities of the Oxford Turbine Research Facility. He has over 100 peer reviewed articles and several patents. Research interests include turbine heat transfer, cooling systems, gas turbines, internal combustion engine instrumentation, tip timing, tip clearance measurements and high temperature instrumentation."
+      name: "Professor Kam Chana FREng",
+      title: "Co-Founder & Head of Thermoelectric Innovation",
+      image: "/botanic-website/assets/images/team/kam-chana.jpg",
+      bio: "Pioneer in thermoelectric materials and device engineering."
     },
     {
-      name: "Tom Capon",
-      role: "Finance (NED)",
-      image: "/assets/images/team/tom-capon.jpg",
-      bio: "Tom is an Advisor to Botanic Energy with an extensive background in Corporate Finance and Investment. Tom is a Venture Capitalist currently plying his trade as an Investment Principal at Optum Ventures in London. Prior to joining Optum, he worked as an Investment Manager at Oxford Science Enterprises and sat on the board of multiple deep tech Engineering and Cleantech companies. Before this Tom was a Venture Capital Portfolio Manager at Legal & General, investing in Health Tech businesses. Tom worked in Strategy & Transactions for EY, on both corporate and private equity deals across a broad range of sectors. Tom is a Chartered Accountant and holds a MSc in Economics & Strategy from Imperial College University."
+      name: "Dr Tom Capon",
+      title: "Director & Co-Founder",
+      image: "/botanic-website/assets/images/team/tom-capon.jpg",
+      bio: "Specialist in energy technology commercialisation."
     },
     {
       name: "Jane Breeden",
-      role: "Founder and Research Officer",
-      image: "/assets/images/team/jane-breeden.jpg",
-      bio: "Jane has extensive experience of human resources, recruitment, training, supervising, evaluating and managing large groups of employees globally. Previously, Jane founded Virgin Touch, (a member of Richard Bransons Virgin Group), which she grew to in excess of 500 personnel with establishments at several major airports and overseas locations. Jane has also created many supply chain relationships and consulted for several of the companies."
+      title: "Chief Operating Officer",
+      image: "/botanic-website/assets/images/team/jane-breeden.jpg",
+      bio: "Experienced operations leader in the technology sector."
     },
     {
       name: "Max Wyllie",
-      role: "Chief Marketing Officer and Communications",
-      image: "/assets/images/team/max-wyllie.jpg",
-      bio: "Max is a Marketing & Content specialist responsible for Botanic's communications and Marketing strategy. Founder and Creative Director of Parallax Cinematics, a Video Production company based in UK and Germany, he has worked extensively within the fields of Corporate, Commercial, Documentary and Film. Previously leading projects for global charities, corporates and events. A recent Project and Documentary created by Max won a Purpose Award for, 'Best Public Awareness Cause Campaign'."
+      title: "Lead Electronics Engineer",
+      image: "/botanic-website/assets/images/team/max-wyllie.jpg",
+      bio: "Expert in power electronics and control systems for energy applications."
     },
     {
       name: "Deepanshu Singh",
-      role: "Advisor",
-      image: "/assets/images/team/deepanshu-singh.jpg",
-      bio: "Deepanshu Singh is an advisor to Botanic Energy with an extensive research background in engineering. Deepanshu recently completed his PhD thesis at University of Oxford, during which he worked with Rolls-Royce, to understand the aerothermal performance of next generation low-emissions aircraft engines. Deepanshu has a bachelor's degree in mechanical engineering from IIT (Indian Institute of Technology) Delhi."
+      title: "Thermoelectric Device Engineer",
+      image: "/botanic-website/assets/images/team/deepanshu-singh.jpg",
+      bio: "Focusing on the design and optimisation of thermoelectric modules."
     },
     {
       name: "James Dimitriou",
-      role: "Corporate Advisor",
-      image: "/assets/images/team/james-dimitriou.jpg",
-      bio: "James Dimitriou is an advisor to Botanic Energy with roughly 15 years experience in Engineering, Cleantech and Financial Sectors. James has over a decade spent developing, scaling up IP and products and bringing them to market. James has led numerous Innovate UK bids as a lead applicant and partner, spearheading the developmental and commercial strategy for the technologies and led project management, seeing technologies through from TRL1-7."
+      title: "Mechanical Design Engineer",
+      image: "/botanic-website/assets/images/team/james-dimitriou.jpg",
+      bio: "Developing innovative mechanical solutions for thermal management systems."
     }
   ];
 
@@ -95,7 +95,7 @@ const Team = () => {
                     {member.name}
                   </h3>
                   <p className="text-white/80">
-                    {member.role}
+                    {member.title}
                   </p>
                 </div>
               </div>

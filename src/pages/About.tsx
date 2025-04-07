@@ -29,56 +29,49 @@ const About = () => {
     }
   ];
 
-  const team = [
+  const teamMembers = [
     {
-      name: "Nick Wyllie",
-      role: "CEO and Founder",
-      image: "/assets/images/team/Nick-Wyllie.png",
-      bio: "Nick Wyllie is an innovator and developer with over 25 years experience in industry and the built environment. A successful entrepreneur with extensive experience as founder and CEO of various companies. Nick holds patents on ten innovations relating to thermodynamics and energy systems."
+      name: "Professor Nick Wyllie OBE FREng FRS",
+      title: "Director, Co-Founder & CTO",
+      image: "/botanic-website/assets/images/team/Nick-Wyllie.png",
     },
     {
-      name: "Professor Kam Chana",
-      role: "Chief Technical Officer",
-      image: "/assets/images/team/Professor-Kam-Chana.png",
-      bio: "Professor Kam Chana is a Fellow of St Anne's College, University of Oxford, Department of Engineering Science. He leads the Oxford Turbine Research Facility and has over 100 peer reviewed articles and several patents in turbine heat transfer and cooling systems."
+      name: "Professor Kam Chana FREng",
+      title: "Co-Founder & Head of Thermoelectric Innovation",
+      image: "/botanic-website/assets/images/team/Professor-Kam-Chana.png",
     },
     {
-      name: "Tom Capon",
-      role: "Finance (NED)",
-      image: "/assets/images/team/Tom-Capon.png",
-      bio: "Tom is an Investment Principal at Optum Ventures with extensive background in Corporate Finance. Previously at Oxford Science Enterprises and Legal & General, he brings valuable experience in deep tech Engineering and Cleantech investments."
+      name: "Dr Tom Capon",
+      title: "Director & Co-Founder",
+      image: "/botanic-website/assets/images/team/Tom-Capon.png",
     },
     {
       name: "Jane Breeden",
-      role: "Founder and Research Officer",
-      image: "/assets/images/team/Jane-Breeden.png",
-      bio: "Jane has extensive experience in human resources and global team management. Previously founded Virgin Touch, a member of Richard Branson's Virgin Group, which she grew to over 500 personnel across multiple international locations."
+      title: "Chief Operating Officer",
+      image: "/botanic-website/assets/images/team/Jane-Breeden.png",
     },
     {
       name: "Max Wyllie",
-      role: "Chief Marketing Officer",
-      image: "/assets/images/team/Max Wyllie.png",
-      bio: "Max is a Marketing & Content specialist leading Botanic's communications strategy. As Creative Director of Parallax Cinematics, he brings extensive experience in corporate and documentary production, with award-winning projects under his belt."
+      title: "Lead Electronics Engineer",
+      image: "/botanic-website/assets/images/team/Max Wyllie.png",
     },
     {
       name: "Deepanshu Singh",
-      role: "Advisor",
-      image: "/assets/images/team/Deepanshu-Singh.png",
-      bio: "Deepanshu completed his PhD at University of Oxford, working with Rolls-Royce on aerothermal performance of next generation low-emissions aircraft engines. He holds a bachelor's degree in mechanical engineering from IIT Delhi."
+      title: "Thermoelectric Device Engineer",
+      image: "/botanic-website/assets/images/team/Deepanshu-Singh.png",
     },
     {
       name: "James Dimitriou",
-      role: "Corporate Advisor",
-      image: "/assets/images/team/James-Dimitriou.png",
-      bio: "James brings 15 years of experience in Engineering and Cleantech sectors. He has led numerous Innovate UK bids and spearheaded developmental and commercial strategies, seeing technologies through from TRL1-7."
-    }
+      title: "Mechanical Design Engineer",
+      image: "/botanic-website/assets/images/team/James-Dimitriou.png",
+    },
   ];
 
-  const partners = [
-    { name: "Oxford University Innovation", image: "/assets/images/general/collaborator-1.png" },
-    { name: "Innovate UK", image: "/assets/images/general/collaborator-2.png" },
-    { name: "Department for Transport", image: "/assets/images/general/collaborator-3.png" },
-    { name: "Advanced Propulsion Centre UK", image: "/assets/images/general/collaborator-4.png" },
+  const collaborators = [
+    { name: "Oxford University Innovation", image: "/botanic-website/assets/images/general/collaborator-1.png" },
+    { name: "Innovate UK", image: "/botanic-website/assets/images/general/collaborator-2.png" },
+    { name: "Department for Transport", image: "/botanic-website/assets/images/general/collaborator-3.png" },
+    { name: "Advanced Propulsion Centre UK", image: "/botanic-website/assets/images/general/collaborator-4.png" },
   ];
 
   return (
@@ -128,7 +121,7 @@ const About = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-xl animate-fade-in">
             <img 
-              src="/assets/images/general/pioneering-energy.jpg" 
+              src="/botanic-website/assets/images/general/pioneering-energy.jpg" 
               alt="Pioneering Energy Solutions" 
               className="w-full h-auto"
               loading="lazy"
@@ -196,7 +189,7 @@ const About = () => {
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
+          {teamMembers.map((member, index) => (
             <div 
               key={index}
               className="glass-card overflow-hidden group hover:shadow-xl animate-fade-in"
@@ -215,13 +208,13 @@ const About = () => {
                     {member.name}
                   </h3>
                   <p className="text-white/80">
-                    {member.role}
+                    {member.title}
                   </p>
                 </div>
               </div>
               <div className="p-6">
                 <p className="text-foreground/70">
-                  {member.bio}
+                  {/* Add member bio here */}
                 </p>
               </div>
             </div>
@@ -238,7 +231,7 @@ const About = () => {
         />
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {partners.map((partner, index) => (
+          {collaborators.map((partner, index) => (
             <div 
               key={index}
               className="glass-card p-8 flex items-center justify-center animate-fade-in"

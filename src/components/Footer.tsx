@@ -11,9 +11,9 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-6">
               <img 
-                src="/assets/images/logo/logo.png" 
-                alt="Botanic Energy" 
-                className="h-16 sm:h-20 w-auto"
+                src="/botanic-website/assets/images/logo/logo.png" 
+                alt="Botanic Energy Logo"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-white/70 mb-6 max-w-sm">
