@@ -1,3 +1,5 @@
+![alt text](image.png)
+
 # Botanic Energy Website
 
 This project is a modern web application built with React, TypeScript, and Vite, styled using Tailwind CSS and the shadcn/ui component library. It features custom animations and is configured for deployment to GitHub Pages.
