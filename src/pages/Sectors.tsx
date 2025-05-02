@@ -61,22 +61,26 @@ const Sectors = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-botanicLight">
-          <div className="absolute inset-0 bg-gradient-to-r from-botanicRed/5 to-botanicBlue/5" />
-          <div className="absolute w-full h-full">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-botanicBlue/10 rounded-full filter blur-3xl animate-pulse-subtle" />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-botanicRed/10 rounded-full filter blur-3xl animate-pulse-subtle" />
-          </div>
+      <section className="relative h-[85vh] sm:h-[90vh] md:h-screen w-full overflow-hidden">
+        {/* Image Background */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <img 
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src="https://res.cloudinary.com/dpw2txejq/image/upload/v1746191385/impactsectors_e23k3w.png"
+            alt="Sectors We Impact"
+          />
+          {/* Dark gradient overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 to-black/40" />
         </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="title-chip animate-fade-in">Impact</div>
-            <h1 className="hero-text mb-6 animate-fade-in">
+
+        {/* Hero Content - Centered in viewport */}
+        <div className="relative h-full flex flex-col justify-center items-center">
+          <div className="container mx-auto px-4 text-center text-white">
+            <div className="title-chip animate-fade-in text-white bg-white/20">Impact</div>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 xs:mb-4 sm:mb-6 leading-tight animate-fade-in">
               Sectors We Impact
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/70 mb-10 animate-fade-in">
+            <p className="text-base xs:text-lg md:text-xl lg:text-2xl max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 text-gray-200 animate-fade-in px-2 xs:px-0">
               Our disruptive technology is transforming multiple industries, delivering sustainable and efficient thermal management solutions.
             </p>
           </div>

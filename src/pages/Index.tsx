@@ -9,21 +9,25 @@ import ImageSection from '@/components/ImageSection';
 import { cn, getImagePath } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ReadMoreInline } from '@/components/ReadMoreContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 const Index = () => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  
   const features = [
     {
       title: "High Efficiency",
       description: "Our systems drastically reduce energy consumption compared to traditional methods.",
-      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicRed/15 p-3 feature-icon-container">
-              <Zap className="h-8 w-8 text-botanicRed" />
+      icon: <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-botanicRed/15 p-3 feature-icon-container">
+              <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-botanicRed" />
             </div>
     },
     {
       title: "Cost Savings",
       description: "Lower energy bills and reduced maintenance lead to significant operational savings.",
-      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicPurple/15 p-3 feature-icon-container">
-              <svg className="h-8 w-8 text-botanicPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      icon: <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-botanicPurple/15 p-3 feature-icon-container">
+              <svg className="h-6 w-6 sm:h-8 sm:w-8 text-botanicPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -31,8 +35,8 @@ const Index = () => {
     {
       title: "Intelligent Control",
       description: "Smart systems optimize performance and provide valuable operational data.",
-      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicBlue/15 p-3 feature-icon-container">
-              <svg className="h-8 w-8 text-botanicBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      icon: <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-botanicBlue/15 p-3 feature-icon-container">
+              <svg className="h-6 w-6 sm:h-8 sm:w-8 text-botanicBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
             </div>
@@ -40,8 +44,8 @@ const Index = () => {
     {
       title: "Sustainable Solution",
       description: "Zero-carbon technology contributing to a greener future.",
-      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-green-50 p-3 feature-icon-container">
-              <Leaf className="h-8 w-8 text-botanicRed/80" />
+      icon: <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-green-50 p-3 feature-icon-container">
+              <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-botanicRed/80" />
             </div>
     },
   ];
@@ -82,7 +86,7 @@ const Index = () => {
               playsInline
               poster={getImagePath('assets/images/index/thermaltap.jpg')}
             >
-              <source src={getImagePath('assets/videos/index/hero-vid.mp4')} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dpw2txejq/video/upload/v1746191346/botanic-mainhero_xggwrs.mp4" type="video/mp4" />
             </video>
             {/* Dark gradient overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 to-black/40" />
@@ -90,7 +94,7 @@ const Index = () => {
 
           {/* Hero Content - Centered in viewport */}
           <div className="relative h-full flex flex-col justify-center items-center">
-            <div className="container mx-auto px-4 text-center text-white">
+            <div className="container mx-auto px-4 text-center text-white max-w-7xl">
               <div className="mb-6 sm:mb-8 flex justify-center animate-fade-in-up">
                 <img 
                   src={getImagePath('assets/images/logo/logo.png')} 
@@ -137,9 +141,17 @@ const Index = () => {
                 alignment="left"
               />
               
-              <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in">
-                Our goal is environmental control of internal spaces through heat transfer, rather than the burning of fossil fuels, achieved through thermodynamics to decarbonize buildings, transport and refrigeration towards a zero carbon future.
-              </p>
+              {isMobile ? (
+                <ReadMoreInline 
+                  text="Our goal is environmental control of internal spaces through heat transfer, rather than the burning of fossil fuels, achieved through thermodynamics to decarbonize buildings, transport and refrigeration towards a zero carbon future. We develop innovative solutions that significantly reduce energy consumption while providing more efficient and environmentally friendly heating and cooling solutions."
+                  maxLength={120}
+                  className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in"
+                />
+              ) : (
+                <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in">
+                  Our goal is environmental control of internal spaces through heat transfer, rather than the burning of fossil fuels, achieved through thermodynamics to decarbonize buildings, transport and refrigeration towards a zero carbon future.
+                </p>
+              )}
               
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
                 <Link 
@@ -152,20 +164,20 @@ const Index = () => {
             </div>
             
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
                     className={cn(
-                      "glass-card p-6 sm:p-7 animate-fade-in hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:bg-white/95",
+                      "glass-card p-4 sm:p-6 md:p-7 animate-fade-in hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:bg-white/95",
                       `delay-[${index * 100}ms]`
                     )}
                   >
-                    <div className="mb-5 flex justify-center sm:justify-start">
+                    <div className="mb-4 sm:mb-5 flex justify-center sm:justify-start">
                       {feature.icon}
                     </div>
-                    <h3 className="text-lg xs:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">{feature.title}</h3>
-                    <p className="text-foreground/70 text-sm xs:text-base text-center sm:text-left">{feature.description}</p>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">{feature.title}</h3>
+                    <p className="text-foreground/70 text-xs sm:text-sm md:text-base text-center sm:text-left">{feature.description}</p>
                   </div>
                 ))}
               </div>
@@ -181,7 +193,7 @@ const Index = () => {
             subtitle="Our innovative thermoelectric systems revolutionize thermal control for various applications, reducing emissions and increasing efficiency."
           />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {technologyCards.map((card, index) => (
               <TechnologyCard 
                 key={index}
@@ -200,12 +212,24 @@ const Index = () => {
           >
             <div className="title-chip animate-fade-in-right">Featured Technology</div>
             <h2 className="section-title mb-6 animate-fade-in-right">Thermodynamic Taps and Valves</h2>
-            <p className="text-lg text-foreground/70 mb-6 animate-fade-in-right">
-              Botanic Energy's thermal taps heat and cool water at source on demand through the innovative use of thermodynamic systems. In combination with our Thermal Cladding, a household or building's boiler becomes unnecessary.
-            </p>
-            <p className="text-lg text-foreground/70 mb-8 animate-fade-in-right">
-              This technology significantly reduces energy consumption while providing more efficient and environmentally friendly water heating and cooling solutions.
-            </p>
+            
+            {isMobile ? (
+              <ReadMoreInline 
+                text="Botanic Energy's thermal taps heat and cool water at source on demand through the innovative use of thermodynamic systems. In combination with our Thermal Cladding, a household or building's boiler becomes unnecessary. This technology significantly reduces energy consumption while providing more efficient and environmentally friendly water heating and cooling solutions."
+                maxLength={120}
+                className="text-base sm:text-lg text-foreground/70 mb-6 animate-fade-in-right"
+              />
+            ) : (
+              <>
+                <p className="text-base sm:text-lg text-foreground/70 mb-6 animate-fade-in-right">
+                  Botanic Energy's thermal taps heat and cool water at source on demand through the innovative use of thermodynamic systems. In combination with our Thermal Cladding, a household or building's boiler becomes unnecessary.
+                </p>
+                <p className="text-base sm:text-lg text-foreground/70 mb-8 animate-fade-in-right">
+                  This technology significantly reduces energy consumption while providing more efficient and environmentally friendly water heating and cooling solutions.
+                </p>
+              </>
+            )}
+            
             <Link 
               to="/technology#thermal-taps" 
               className="btn-primary inline-block animate-fade-in-right"
@@ -232,9 +256,19 @@ const Index = () => {
             <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 md:mb-8 animate-fade-in">
               Using Energy to Build <br className="hidden sm:block" /> Not Destroy
             </h2>
-            <p className="text-base xs:text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 md:mb-10 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto animate-fade-in px-2 xs:px-0">
-              We're creating a future where energy consumption contributes to sustainable development rather than environmental degradation. Our innovative technologies harness the power of thermodynamics to build a cleaner, more efficient world.
-            </p>
+            
+            {isMobile ? (
+              <ReadMoreInline 
+                text="We're creating a future where energy consumption contributes to sustainable development rather than environmental degradation. Our innovative technologies harness the power of thermodynamics to build a cleaner, more efficient world. Through our breakthrough solutions, we're working to transform how heating and cooling systems operate across various sectors, providing pathways to a carbon-neutral future."
+                maxLength={120}
+                className="text-base xs:text-lg text-white/80 mb-6 sm:mb-8 md:mb-10 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto animate-fade-in px-2 xs:px-0"
+              />
+            ) : (
+              <p className="text-base xs:text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 md:mb-10 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto animate-fade-in px-2 xs:px-0">
+                We're creating a future where energy consumption contributes to sustainable development rather than environmental degradation. Our innovative technologies harness the power of thermodynamics to build a cleaner, more efficient world.
+              </p>
+            )}
+            
             <Link 
               to="/about#vision" 
               className="inline-block bg-white text-botanicDark font-medium px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] animate-fade-in"

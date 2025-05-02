@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Navbar />
-      <main className={cn("flex-grow", !isHomePage && "pt-20 sm:pt-24 md:pt-28 lg:pt-32")}>{children}</main>
+      <main className="flex-grow">{children}</main>
       <Footer />
     </>
   );
