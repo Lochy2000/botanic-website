@@ -6,6 +6,37 @@
 @tailwind utilities;
 
 @layer base {
+  /* Feature icon enhancement */
+  .feature-icon-container {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feature-icon-container:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  /* Navbar logo specific enhancement */
+  .navbar-logo {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+    transition: all 0.4s ease;
+  }
+  
+  .navbar-logo:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3)) brightness(1.1);
+    transform: scale(1.08);
+  }
+  /* Logo enhancement */
+  .logo-enhance {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .logo-enhance:hover {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25)) brightness(1.08);
+    transform: scale(1.05);
+  }
   :root {
     --background: 210 50% 98%;
     --foreground: 222 47% 11%;
@@ -49,42 +80,61 @@
   }
   
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
   }
   
   #root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
 }
 
 @layer components {
+  /* Responsive text utilities */
+  .text-responsive-sm {
+    @apply text-xs xs:text-sm;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm xs:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-base xs:text-lg md:text-xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-lg xs:text-xl md:text-2xl;
+  }
+  
   .hero-text {
-    @apply font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    @apply font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
   }
   
   .section-title {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold;
+    @apply font-display text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-bold;
   }
   
   .title-chip {
-    @apply inline-flex items-center px-3 py-1 text-xs font-medium tracking-wider uppercase rounded-full bg-primary/10 text-primary mb-4;
+    @apply inline-flex items-center px-2 xs:px-3 py-1 text-[10px] xs:text-xs font-medium tracking-wider uppercase rounded-full bg-primary/10 text-primary mb-2 sm:mb-4;
   }
   
   .glass-card {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg transition-all duration-300;
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 rounded-lg sm:rounded-xl md:rounded-2xl shadow-md sm:shadow-lg transition-all duration-300;
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-botanicRed to-botanicPurple text-white font-medium px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px];
+    @apply bg-gradient-to-r from-botanicRed to-botanicPurple text-white font-medium px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-sm sm:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px];
   }
   
   .btn-secondary {
-    @apply bg-white text-botanicDark border border-botanicDark/10 font-medium px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-2px];
+    @apply bg-white text-botanicDark border border-botanicDark/10 font-medium px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-sm sm:text-base rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-2px];
   }
   
   .nav-link {

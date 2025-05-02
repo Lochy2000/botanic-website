@@ -4,6 +4,7 @@ import SectionTitle from '@/components/SectionTitle';
 import ImageSection from '@/components/ImageSection';
 import CTA from '@/components/CTA';
 import { Zap, Thermometer, Wind, BarChart, ThermometerSun, PackageCheck, Recycle, Waves, ShipWheel } from 'lucide-react';
+import { getImagePath } from '@/lib/utils';
 
 const Technology = () => {
   const benefits = [
@@ -32,7 +33,7 @@ const Technology = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative pt-24 xs:pt-28 sm:pt-32 md:pt-40 pb-16 xs:pb-20 sm:pb-24 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-botanicLight">
           <div className="absolute inset-0 bg-gradient-to-r from-botanicRed/5 to-botanicBlue/5" />
           <div className="absolute w-full h-full">
@@ -44,10 +45,10 @@ const Technology = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="title-chip animate-fade-in">Innovation</div>
-            <h1 className="hero-text mb-6 animate-fade-in">
+            <h1 className="hero-text mb-3 xs:mb-4 sm:mb-6 animate-fade-in">
               Our Revolutionary Technology
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/70 mb-10 animate-fade-in">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-foreground/70 mb-6 sm:mb-8 md:mb-10 animate-fade-in max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl mx-auto px-2 xs:px-0">
               Cutting-edge thermoelectric systems that transform how we approach environmental control and energy efficiency.
             </p>
           </div>
@@ -56,7 +57,7 @@ const Technology = () => {
       
       {/* Overview Section */}
       <SectionContainer>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           <div>
             <SectionTitle 
               chip="Overview"
@@ -65,11 +66,11 @@ const Technology = () => {
               alignment="left"
             />
             
-            <p className="text-foreground/70 mb-6 animate-fade-in">
+            <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in">
               Traditional heating, cooling and refrigeration equipment consumes large amounts of energy and creates considerable pollution, both harmful emissions and leakages of damaging substances. Botanic Energy's disruptive solid state technology aims to revolutionize thermal control for various applications.
             </p>
             
-            <p className="text-foreground/70 mb-6 animate-fade-in">
+            <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in">
               Our systems take advantage of temperature differences between external and internal environments, utilizing the heat around us rather than creating heat. This approach is more energy efficient and considerably less polluting than existing temperature control methods.
             </p>
           </div>
@@ -82,9 +83,9 @@ const Technology = () => {
               playsInline
               preload="none"
               className="w-full h-auto"
-              poster="/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png"
+              poster={getImagePath('assets/images/technology/solidstate-poster.png')}
             >
-              <source src="/botanic-website/assets/videos/technology/solidstate.mp4" type="video/mp4" />
+              <source src={getImagePath('assets/videos/technology/solidstate.mp4')} type="video/mp4" />
             </video>
           </div>
         </div>
@@ -98,17 +99,17 @@ const Technology = () => {
           subtitle="Our innovative systems offer numerous benefits over conventional heating and cooling methods."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="glass-card p-8 animate-fade-in"
+              className="glass-card p-4 xs:p-6 md:p-8 animate-fade-in"
             >
               <div className="mb-4 p-3 inline-flex items-center justify-center rounded-lg bg-foreground/5">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-foreground/70">{benefit.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 sm:mb-3">{benefit.title}</h3>
+              <p className="text-sm xs:text-base text-foreground/70">{benefit.description}</p>
             </div>
           ))}
         </div>
@@ -117,12 +118,12 @@ const Technology = () => {
       {/* Built Environment Section */}
       <SectionContainer id="built-environment">
         <ImageSection 
-          image="/botanic-website/assets/images/technology/thermal.jpg"
+          image={getImagePath('assets/images/technology/thermal.jpg')}
           alt="Built Environment"
         >
           <div className="title-chip animate-fade-in-right">Application</div>
-          <h2 className="section-title mb-6 animate-fade-in-right">The Built Environment</h2>
-          <p className="text-lg text-foreground/70 mb-6 animate-fade-in-right">
+          <h2 className="section-title mb-3 sm:mb-4 md:mb-6 animate-fade-in-right">The Built Environment</h2>
+          <p className="text-base sm:text-lg text-foreground/70 mb-4 sm:mb-6 animate-fade-in-right">
             Combining a building's external fabric and space heating into a single coordinated system and using the heat around us rather than burning fossil fuels to generate heat, will decarbonize emissions significantly and contribute towards the desire for net zero emissions.
           </p>
           <p className="text-lg text-foreground/70 mb-6 animate-fade-in-right">
@@ -137,13 +138,13 @@ const Technology = () => {
       {/* Cold Chain Section */}
       <SectionContainer id="cold-chain" className="bg-botanicLight">
         <ImageSection 
-          image="/botanic-website/assets/images/technology/coldchain.jpg"
+          image={getImagePath('assets/images/technology/coldchain.jpg')}
           alt="Cold Chain Distribution"
           position="right"
         >
           <div className="title-chip animate-fade-in-left">Application</div>
-          <h2 className="section-title mb-6 animate-fade-in-left">Cold Chain Distribution</h2>
-          <p className="text-lg text-foreground/70 mb-6 animate-fade-in-left">
+          <h2 className="section-title mb-3 sm:mb-4 md:mb-6 animate-fade-in-left">Cold Chain Distribution</h2>
+          <p className="text-base sm:text-lg text-foreground/70 mb-4 sm:mb-6 animate-fade-in-left">
             Botanic Energy's systems replace heavy refrigeration units, pumps and compressors with lighter solid state thermodynamic devices, coupled with reductions in insulation, savings in weight can be achieved leading to energy savings and reduced operating costs.
           </p>
           <p className="text-lg text-foreground/70 mb-6 animate-fade-in-left">
@@ -158,7 +159,7 @@ const Technology = () => {
       {/* Agri-Tech Section */}
       <SectionContainer id="agri-tech">
         <ImageSection 
-          image="/botanic-website/assets/images/technology/thermal.jpg"
+          image={getImagePath('assets/images/technology/thermal.jpg')}
           alt="Agri-Tech Solutions"
         >
           <div className="title-chip animate-fade-in-right">Application</div>
@@ -178,7 +179,7 @@ const Technology = () => {
       {/* Thermal Taps Section */}
       <SectionContainer id="thermal-taps" className="bg-botanicLight">
         <ImageSection 
-          image="/botanic-website/assets/images/technology/thermaltap.jpg"
+          image={getImagePath('assets/images/technology/thermaltap.jpg')}
           alt="Thermal Taps and Valves"
           position="right"
         >
@@ -199,7 +200,7 @@ const Technology = () => {
       {/* Aviation Section */}
       <SectionContainer id="aviation">
         <ImageSection 
-          image="/botanic-website/assets/images/technology/aviation.jpg"
+          image={getImagePath('assets/images/technology/aviation.jpg')}
           alt="Aviation Applications"
         >
           <div className="title-chip animate-fade-in-right">Application</div>

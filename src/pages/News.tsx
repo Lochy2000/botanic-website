@@ -5,13 +5,13 @@ import SectionTitle from '@/components/SectionTitle';
 import CTA from '@/components/CTA';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Tags } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, getImagePath } from '@/lib/utils';
 
 const News = () => {
   const featuredArticle = {
     title: "Botanic Energy Secures Major Investment for Global Expansion",
     excerpt: "New funding will accelerate the deployment of our revolutionary thermoelectric systems in key markets across Europe, Africa, and Asia.",
-    image: "/lovable-uploads/15a347db-5b38-4bc5-ac29-6239ca4aa65e.png",
+    image: getImagePath('assets/images/news/featured.png'),
     date: "May 15, 2023",
     author: "James Wilson",
     category: "Company News",
@@ -22,7 +22,7 @@ const News = () => {
     {
       title: "New Partnership Aims to Transform Cold Chain Distribution in Africa",
       excerpt: "Botanic Energy collaborates with leading logistics providers to implement sustainable refrigeration solutions across Sub-Saharan Africa.",
-      image: "/lovable-uploads/be3fbece-99a1-46db-bcfe-136103aa1f65.png",
+      image: getImagePath('assets/images/news/article1.png'),
       date: "April 3, 2023",
       author: "Sarah Johnson",
       category: "Partnerships",
@@ -31,7 +31,7 @@ const News = () => {
     {
       title: "Thermal Cladding Technology Receives Innovation Award",
       excerpt: "Our revolutionary building envelope system recognized for its contribution to energy efficiency and sustainable architecture.",
-      image: "/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png",
+      image: getImagePath('assets/images/news/article2.png'),
       date: "March 18, 2023",
       author: "Michael Chen",
       category: "Awards",
@@ -40,7 +40,7 @@ const News = () => {
     {
       title: "Case Study: Reducing Carbon Footprint in Commercial Refrigeration",
       excerpt: "How our solid-state technology helped a major retailer cut emissions by 60% while improving reliability and reducing operating costs.",
-      image: "/lovable-uploads/be3fbece-99a1-46db-bcfe-136103aa1f65.png",
+      image: getImagePath('assets/images/news/article3.png'),
       date: "February 22, 2023",
       author: "Emma Thompson",
       category: "Case Studies",
@@ -49,7 +49,7 @@ const News = () => {
     {
       title: "The Future of Sustainable Agriculture: Controlled Environment Solutions",
       excerpt: "Exploring how advanced thermal management is transforming indoor farming and food production worldwide.",
-      image: "/lovable-uploads/0c84872f-d828-46c1-830f-f503220c2ec4.png",
+      image: getImagePath('assets/images/news/article4.png'),
       date: "January 30, 2023",
       author: "David Rodriguez",
       category: "Industry Insights",
@@ -58,7 +58,7 @@ const News = () => {
     {
       title: "New Research Collaboration with Oxford University",
       excerpt: "Joint project aims to further develop next-generation thermodynamic materials for even greater efficiency gains.",
-      image: "/lovable-uploads/365e5d7f-d199-4f31-a2a7-c7bd5ccff3b6.png",
+      image: getImagePath('assets/images/news/article5.png'),
       date: "January 12, 2023",
       author: "Laura Williams",
       category: "Research",
@@ -67,7 +67,7 @@ const News = () => {
     {
       title: "Botanic Energy Expands Engineering Team as Demand Grows",
       excerpt: "New hires bring specialized expertise in thermal physics, sustainable design, and manufacturing optimization.",
-      image: "/lovable-uploads/f0bb58ba-4e45-40f9-a243-c232c9f0a9de.png",
+      image: getImagePath('assets/images/news/article6.png'),
       date: "December 8, 2022",
       author: "James Wilson",
       category: "Company News",

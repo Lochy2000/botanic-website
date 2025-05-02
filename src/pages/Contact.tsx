@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative pt-24 xs:pt-28 sm:pt-32 md:pt-40 pb-16 xs:pb-20 sm:pb-24 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-botanicLight">
           <div className="absolute inset-0 bg-gradient-to-r from-botanicRed/5 to-botanicBlue/5" />
           <div className="absolute w-full h-full">
@@ -59,10 +59,10 @@ const Contact = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="title-chip animate-fade-in">Get in Touch</div>
-            <h1 className="hero-text mb-6 animate-fade-in">
+            <h1 className="hero-text mb-3 xs:mb-4 sm:mb-6 animate-fade-in">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/70 mb-10 animate-fade-in">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-foreground/70 mb-6 sm:mb-8 md:mb-10 animate-fade-in max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl mx-auto px-2 xs:px-0">
               Have questions or interested in our technology? We'd love to hear from you.
             </p>
           </div>
@@ -70,13 +70,13 @@ const Contact = () => {
       </section>
       
       {/* Contact Section */}
-      <SectionContainer className="py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+      <SectionContainer className="py-8 xs:py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-8 animate-fade-in-left">
             <div className="glass-card p-8">
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-              <div className="space-y-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 md:mb-6">Contact Information</h2>
+              <div className="space-y-3 sm:space-y-4 md:space-y-6">
                 <div className="flex items-start">
                   <div className="bg-botanicRed/10 p-3 rounded-full mr-4">
                     <MapPin className="h-6 w-6 text-botanicRed" />
@@ -132,8 +132,8 @@ const Contact = () => {
             </div>
             
             <div className="glass-card p-8">
-              <h2 className="text-2xl font-bold mb-6">Connect With Us</h2>
-              <p className="text-foreground/70 mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 md:mb-6">Connect With Us</h2>
+              <p className="text-sm xs:text-base text-foreground/70 mb-3 sm:mb-4 md:mb-6">
                 Follow us on social media to stay updated with our latest news, innovations, and insights.
               </p>
               <div className="flex space-x-4">
@@ -164,9 +164,9 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="glass-card p-8 animate-fade-in-right">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 md:mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block mb-2 text-sm font-medium">
                       Your Name*
@@ -272,7 +272,7 @@ const Contact = () => {
                 <button 
                   type="submit"
                   disabled={loading}
-                  className="flex items-center justify-center bg-gradient-to-r from-botanicRed to-botanicPurple text-white font-medium px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] w-full md:w-auto"
+                  className="flex items-center justify-center bg-gradient-to-r from-botanicRed to-botanicPurple text-white font-medium px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-sm sm:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] w-full sm:w-auto"
                 >
                   {loading ? (
                     <span className="flex items-center">
@@ -296,13 +296,13 @@ const Contact = () => {
       </SectionContainer>
       
       {/* Map Section */}
-      <SectionContainer className="bg-botanicLight py-12">
+      <SectionContainer className="bg-botanicLight py-8 xs:py-10 sm:py-12">
         <SectionTitle 
           title="Visit Our Office"
           subtitle="We're located in the heart of Sustainable City, easily accessible by public transport."
         />
         
-        <div className="glass-card rounded-2xl overflow-hidden shadow-xl h-96 animate-fade-in">
+        <div className="glass-card rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-md sm:shadow-lg md:shadow-xl h-60 sm:h-72 md:h-80 lg:h-96 animate-fade-in">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47339848557!2d-0.24168108072440222!3d51.52855824103479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1631541234567!5m2!1sen!2sus"
             width="100%"

@@ -25,18 +25,18 @@ const TechnologyCard = ({
         className
       )}
     >
-      <div className="relative h-60 overflow-hidden">
+      <div className="relative h-48 xs:h-52 sm:h-56 md:h-60 overflow-hidden">
         <img 
           src={image} 
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-      <div className="p-6 md:p-8">
-        <h3 className="text-xl md:text-2xl font-semibold mb-3">
+      <div className="p-4 sm:p-6 md:p-8">
+        <h3 className="text-lg xs:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">
           {title}
         </h3>
-        <p className="text-foreground/70 mb-6">
+        <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6">
           {description}
         </p>
         <Link 

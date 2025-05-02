@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Botanic Energy</title>
-    <link rel="icon" type="image/png" href="/assets/images/logo/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/assets/images/logo/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- These paths should not use getImagePath since it's not JavaScript -->
+    <!-- They'll be handled by Vite's base configuration automatically -->
+    <link rel="icon" type="image/png" href="%BASE_URL%assets/images/logo/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="%BASE_URL%assets/images/logo/apple-touch-icon.png">
+    <link rel="manifest" href="%BASE_URL%site.webmanifest">
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>

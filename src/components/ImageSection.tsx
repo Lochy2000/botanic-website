@@ -18,7 +18,7 @@ const ImageSection = ({
 }: ImageSectionProps) => {
   return (
     <div className={cn(
-      "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center",
+      "grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center",
       className
     )}>
       <div className={cn(
@@ -32,11 +32,12 @@ const ImageSection = ({
         "order-1",
         position === 'left' ? 'md:order-1' : 'md:order-2'
       )}>
-        <div className="rounded-2xl overflow-hidden shadow-xl">
+        <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
           <img 
             src={image} 
             alt={alt} 
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9]"
+            loading="lazy"
           />
         </div>
       </div>

@@ -12,7 +12,7 @@ const SectionContainer = ({ children, className, id }: SectionContainerProps) =>
     <section 
       id={id}
       className={cn(
-        "py-16 md:py-24 px-4 md:px-6",
+        "py-10 xs:py-12 sm:py-16 md:py-20 lg:py-24 px-3 xs:px-4 md:px-6",
         className
       )}
     >

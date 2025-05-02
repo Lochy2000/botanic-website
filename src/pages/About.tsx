@@ -4,6 +4,7 @@ import SectionTitle from '@/components/SectionTitle';
 import CTA from '@/components/CTA';
 import { Link } from 'react-router-dom';
 import { Users, Target, Clock, Award } from 'lucide-react';
+import { getImagePath } from '@/lib/utils';
 
 const About = () => {
   const values = [
@@ -33,45 +34,45 @@ const About = () => {
     {
       name: "Professor Nick Wyllie OBE FREng FRS",
       title: "Director, Co-Founder & CTO",
-      image: "/botanic-website/assets/images/team/Nick-Wyllie.png",
+      image: getImagePath('assets/images/team/Nick-Wyllie.png'),
     },
     {
       name: "Professor Kam Chana FREng",
       title: "Co-Founder & Head of Thermoelectric Innovation",
-      image: "/botanic-website/assets/images/team/Professor-Kam-Chana.png",
+      image: getImagePath('assets/images/team/Professor-Kam-Chana.png'),
     },
     {
       name: "Dr Tom Capon",
       title: "Director & Co-Founder",
-      image: "/botanic-website/assets/images/team/Tom-Capon.png",
+      image: getImagePath('assets/images/team/Tom-Capon.png'),
     },
     {
       name: "Jane Breeden",
       title: "Chief Operating Officer",
-      image: "/botanic-website/assets/images/team/Jane-Breeden.png",
+      image: getImagePath('assets/images/team/Jane-Breeden.png'),
     },
     {
       name: "Max Wyllie",
       title: "Lead Electronics Engineer",
-      image: "/botanic-website/assets/images/team/Max Wyllie.png",
+      image: getImagePath('assets/images/team/Max Wyllie.png'),
     },
     {
       name: "Deepanshu Singh",
       title: "Thermoelectric Device Engineer",
-      image: "/botanic-website/assets/images/team/Deepanshu-Singh.png",
+      image: getImagePath('assets/images/team/Deepanshu-Singh.png'),
     },
     {
       name: "James Dimitriou",
       title: "Mechanical Design Engineer",
-      image: "/botanic-website/assets/images/team/James-Dimitriou.png",
+      image: getImagePath('assets/images/team/James-Dimitriou.png'),
     },
   ];
 
   const collaborators = [
-    { name: "Oxford University Innovation", image: "/botanic-website/assets/images/general/collaborator-1.png" },
-    { name: "Innovate UK", image: "/botanic-website/assets/images/general/collaborator-2.png" },
-    { name: "Department for Transport", image: "/botanic-website/assets/images/general/collaborator-3.png" },
-    { name: "Advanced Propulsion Centre UK", image: "/botanic-website/assets/images/general/collaborator-4.png" },
+    { name: "Oxford University Innovation", image: getImagePath('assets/images/general/collaborator-1.png') },
+    { name: "Innovate UK", image: getImagePath('assets/images/general/collaborator-2.png') },
+    { name: "Department for Transport", image: getImagePath('assets/images/general/collaborator-3.png') },
+    { name: "Advanced Propulsion Centre UK", image: getImagePath('assets/images/general/collaborator-4.png') },
   ];
 
   return (
@@ -121,7 +122,7 @@ const About = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-xl animate-fade-in">
             <img 
-              src="/botanic-website/assets/images/general/pioneering-energy.jpg" 
+              src={getImagePath('assets/images/general/pioneering-energy.jpg')} 
               alt="Pioneering Energy Solutions" 
               className="w-full h-auto"
               loading="lazy"

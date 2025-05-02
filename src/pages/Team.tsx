@@ -1,49 +1,50 @@
 import Layout from '@/components/Layout';
 import SectionContainer from '@/components/SectionContainer';
 import SectionTitle from '@/components/SectionTitle';
+import { getImagePath } from '@/lib/utils';
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Professor Nick Wyllie OBE FREng FRS",
       title: "Director, Co-Founder & CTO",
-      image: "/botanic-website/assets/images/team/nick-wyllie.jpg",
+      image: getImagePath('assets/images/team/nick-wyllie.jpg'),
       bio: "Leading expert in thermodynamics and energy systems."
     },
     {
       name: "Professor Kam Chana FREng",
       title: "Co-Founder & Head of Thermoelectric Innovation",
-      image: "/botanic-website/assets/images/team/kam-chana.jpg",
+      image: getImagePath('assets/images/team/kam-chana.jpg'),
       bio: "Pioneer in thermoelectric materials and device engineering."
     },
     {
       name: "Dr Tom Capon",
       title: "Director & Co-Founder",
-      image: "/botanic-website/assets/images/team/tom-capon.jpg",
+      image: getImagePath('assets/images/team/tom-capon.jpg'),
       bio: "Specialist in energy technology commercialisation."
     },
     {
       name: "Jane Breeden",
       title: "Chief Operating Officer",
-      image: "/botanic-website/assets/images/team/jane-breeden.jpg",
+      image: getImagePath('assets/images/team/jane-breeden.jpg'),
       bio: "Experienced operations leader in the technology sector."
     },
     {
       name: "Max Wyllie",
       title: "Lead Electronics Engineer",
-      image: "/botanic-website/assets/images/team/max-wyllie.jpg",
+      image: getImagePath('assets/images/team/max-wyllie.jpg'),
       bio: "Expert in power electronics and control systems for energy applications."
     },
     {
       name: "Deepanshu Singh",
       title: "Thermoelectric Device Engineer",
-      image: "/botanic-website/assets/images/team/deepanshu-singh.jpg",
+      image: getImagePath('assets/images/team/deepanshu-singh.jpg'),
       bio: "Focusing on the design and optimisation of thermoelectric modules."
     },
     {
       name: "James Dimitriou",
       title: "Mechanical Design Engineer",
-      image: "/botanic-website/assets/images/team/james-dimitriou.jpg",
+      image: getImagePath('assets/images/team/james-dimitriou.jpg'),
       bio: "Developing innovative mechanical solutions for thermal management systems."
     }
   ];

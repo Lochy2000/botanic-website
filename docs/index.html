@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Botanic Energy</title>
-    <link rel="icon" type="image/png" href="./assets/images/logo/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="./assets/images/logo/apple-touch-icon.png">
-    <link rel="manifest" href="./site.webmanifest">
+    <!-- These paths should not use getImagePath since it's not JavaScript -->
+    <!-- They'll be handled by Vite's base configuration automatically -->
+    <link rel="icon" type="image/png" href="/botanic-website/assets/images/logo/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/botanic-website/assets/images/logo/apple-touch-icon.png">
+    <link rel="manifest" href="/botanic-website/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
-    <script type="module" crossorigin src="/bontaic-energy-website/assets/js/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/bontaic-energy-website/assets/index.css">
+    <script type="module" crossorigin src="/botanic-website/assets/js/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/botanic-website/assets/index.css">
   </head>
-  <body><!-- Force deploy -->
+  <body>
     <div id="root"></div>
-
   </body>
 </html>

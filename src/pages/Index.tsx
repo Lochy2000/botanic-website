@@ -6,7 +6,7 @@ import SectionTitle from '@/components/SectionTitle';
 import TechnologyCard from '@/components/TechnologyCard';
 import CTA from '@/components/CTA';
 import ImageSection from '@/components/ImageSection';
-import { cn } from '@/lib/utils';
+import { cn, getImagePath } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
@@ -15,22 +15,34 @@ const Index = () => {
     {
       title: "High Efficiency",
       description: "Our systems drastically reduce energy consumption compared to traditional methods.",
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/speedometer.svg')" }} />,  
+      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicRed/15 p-3 feature-icon-container">
+              <Zap className="h-8 w-8 text-botanicRed" />
+            </div>
     },
     {
       title: "Cost Savings",
       description: "Lower energy bills and reduced maintenance lead to significant operational savings.",
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/coins.svg')" }} />,  
+      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicPurple/15 p-3 feature-icon-container">
+              <svg className="h-8 w-8 text-botanicPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
     },
     {
       title: "Intelligent Control",
       description: "Smart systems optimize performance and provide valuable operational data.",
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/brain.svg')" }} />,  
+      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-botanicBlue/15 p-3 feature-icon-container">
+              <svg className="h-8 w-8 text-botanicBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
     },
     {
       title: "Sustainable Solution",
       description: "Zero-carbon technology contributing to a greener future.",
-      icon: <div className="w-12 h-12 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/botanic-website/assets/images/index/recycle.svg')" }} />, 
+      icon: <div className="w-14 h-14 flex items-center justify-center rounded-full bg-green-50 p-3 feature-icon-container">
+              <Leaf className="h-8 w-8 text-botanicRed/80" />
+            </div>
     },
   ];
 
@@ -38,19 +50,19 @@ const Index = () => {
     {
       title: "Built Environment",
       description: "Revolutionizing HVAC in commercial and residential buildings.",
-      image: "/botanic-website/assets/images/index/thermal.jpg",
+      image: getImagePath('assets/images/index/thermal.jpg'),
       link: "/sectors/built-environment"
     },
     {
       title: "Cold Chain Logistics",
       description: "Sustainable, diesel-free refrigeration for transport.",
-      image: "/botanic-website/assets/images/index/coldchain.jpg",
+      image: getImagePath('assets/images/index/coldchain.jpg'),
       link: "/sectors/transport-refrigeration"
     },
     {
       title: "Agri-Tech",
       description: "Precision climate control for modern farming.",
-      image: "/botanic-website/assets/images/index/agri.png",
+      image: getImagePath('assets/images/index/agri.png'),
       link: "/sectors/agri-tech"
     }
   ];
@@ -59,7 +71,7 @@ const Index = () => {
     <Layout>
       <div className="animate-fade-in">
         {/* Hero Section - Full height with overlay content */}
-        <section className="relative h-screen w-full overflow-hidden">
+        <section className="relative h-[85vh] sm:h-[90vh] md:h-screen w-full overflow-hidden">
           {/* Video Background - Fills entire viewport */}
           <div className="absolute top-0 left-0 w-full h-full">
             <video 
@@ -68,9 +80,9 @@ const Index = () => {
               muted
               loop
               playsInline
-              poster="/botanic-website/assets/images/index/thermaltap.jpg"
+              poster={getImagePath('assets/images/index/thermaltap.jpg')}
             >
-              <source src="/botanic-website/assets/videos/index/hero-vid.mp4" type="video/mp4" />
+              <source src={getImagePath('assets/videos/index/hero-vid.mp4')} type="video/mp4" />
             </video>
             {/* Dark gradient overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 to-black/40" />
@@ -79,19 +91,26 @@ const Index = () => {
           {/* Hero Content - Centered in viewport */}
           <div className="relative h-full flex flex-col justify-center items-center">
             <div className="container mx-auto px-4 text-center text-white">
-              <Badge className="mb-4 bg-botanicRed/80 text-white px-4 py-1 animate-fade-in-up">
+              <div className="mb-6 sm:mb-8 flex justify-center animate-fade-in-up">
+                <img 
+                  src={getImagePath('assets/images/logo/logo.png')} 
+                  alt="Botanic Energy Logo"
+                  className="h-20 xs:h-24 sm:h-28 md:h-32 w-auto drop-shadow-lg brightness-110 logo-enhance"
+                />
+              </div>
+              <Badge className="mb-2 sm:mb-4 bg-botanicRed/80 text-white px-2 xs:px-3 sm:px-4 py-0.5 sm:py-1 text-xs animate-fade-in-up">
                 Redefining Energy Efficiency
               </Badge>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up animation-delay-200">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 xs:mb-4 sm:mb-6 leading-tight animate-fade-in-up animation-delay-200">
                 The Future of <br />
                 Heating and Cooling
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-10 text-gray-200 animate-fade-in-up animation-delay-400">
+              <p className="text-base xs:text-lg md:text-xl lg:text-2xl max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 text-gray-200 animate-fade-in-up animation-delay-400 px-2 xs:px-0">
                 Revolutionary thermoelectric systems for a zero-carbon future,
                 replacing diesel-powered refrigeration and creating sustainable
                 cold chains worldwide.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
+              <div className="flex flex-col xs:flex-row justify-center gap-3 sm:gap-4 animate-fade-in-up animation-delay-600 px-4 xs:px-0">
                 <Link to="/technology">
                   <Button size="lg" className="btn-primary w-full sm:w-auto">
                     Explore Our Technology
@@ -109,7 +128,7 @@ const Index = () => {
 
         {/* About Section */}
         <SectionContainer id="about">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-3">
               <SectionTitle 
                 chip="About Us"
@@ -118,7 +137,7 @@ const Index = () => {
                 alignment="left"
               />
               
-              <p className="text-foreground/70 mb-6 animate-fade-in">
+              <p className="text-sm xs:text-base text-foreground/70 mb-4 sm:mb-6 animate-fade-in">
                 Our goal is environmental control of internal spaces through heat transfer, rather than the burning of fossil fuels, achieved through thermodynamics to decarbonize buildings, transport and refrigeration towards a zero carbon future.
               </p>
               
@@ -133,20 +152,20 @@ const Index = () => {
             </div>
             
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6">
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
                     className={cn(
-                      "glass-card p-8 animate-fade-in hover:shadow-lg transition-all duration-300",
+                      "glass-card p-6 sm:p-7 animate-fade-in hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:bg-white/95",
                       `delay-[${index * 100}ms]`
                     )}
                   >
-                    <div className="mb-6">
+                    <div className="mb-5 flex justify-center sm:justify-start">
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                    <p className="text-foreground/70 text-lg">{feature.description}</p>
+                    <h3 className="text-lg xs:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">{feature.title}</h3>
+                    <p className="text-foreground/70 text-sm xs:text-base text-center sm:text-left">{feature.description}</p>
                   </div>
                 ))}
               </div>
@@ -162,7 +181,7 @@ const Index = () => {
             subtitle="Our innovative thermoelectric systems revolutionize thermal control for various applications, reducing emissions and increasing efficiency."
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {technologyCards.map((card, index) => (
               <TechnologyCard 
                 key={index}
@@ -176,7 +195,7 @@ const Index = () => {
         {/* Image Section */}
         <SectionContainer>
           <ImageSection 
-            image="/botanic-website/assets/images/index/thermaltap.jpg"
+            image={getImagePath('assets/images/index/thermaltap.jpg')}
             alt="Thermal Taps and Valves"
           >
             <div className="title-chip animate-fade-in-right">Featured Technology</div>
@@ -200,7 +219,7 @@ const Index = () => {
         <SectionContainer className="bg-botanicDark text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
             <img 
-              src="/botanic-website/assets/images/index/call-to-action.jpg" 
+              src={getImagePath('assets/images/index/call-to-action.jpg')} 
               alt="Nature background" 
               className="w-full h-full object-cover"
             />
@@ -210,10 +229,10 @@ const Index = () => {
             <div className="inline-flex items-center px-4 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6 animate-fade-in">
               Our Vision
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 animate-fade-in">
-              Using Energy to Build <br className="hidden md:block" /> Not Destroy
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 md:mb-8 animate-fade-in">
+              Using Energy to Build <br className="hidden sm:block" /> Not Destroy
             </h2>
-            <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto animate-fade-in">
+            <p className="text-base xs:text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 md:mb-10 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto animate-fade-in px-2 xs:px-0">
               We're creating a future where energy consumption contributes to sustainable development rather than environmental degradation. Our innovative technologies harness the power of thermodynamics to build a cleaner, more efficient world.
             </p>
             <Link 
@@ -233,32 +252,32 @@ const Index = () => {
             subtitle="We work with forward-thinking organizations to accelerate the development and adoption of our sustainable technologies."
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-6 sm:gap-8 items-center justify-items-center">
             <img 
-              src="/botanic-website/assets/images/general/collaborator-1.png"
+              src={getImagePath('assets/images/general/collaborator-1.png')}
               alt="Oxford University Innovation"
-              className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain hover:opacity-90 transition-opacity drop-shadow-md logo-enhance"
               loading="lazy"
               decoding="async"
             />
             <img 
-              src="/botanic-website/assets/images/general/collaborator-2.png"
+              src={getImagePath('assets/images/general/collaborator-2.png')}
               alt="Innovate UK"
-              className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain hover:opacity-90 transition-opacity drop-shadow-md logo-enhance"
               loading="lazy"
               decoding="async"
             />
             <img 
-              src="/botanic-website/assets/images/general/collaborator-3.png"
+              src={getImagePath('assets/images/general/collaborator-3.png')}
               alt="Department for Transport"
-              className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain hover:opacity-90 transition-opacity drop-shadow-md logo-enhance"
               loading="lazy"
               decoding="async"
             />
             <img 
-              src="/botanic-website/assets/images/general/collaborator-4.png"
+              src={getImagePath('assets/images/general/collaborator-4.png')}
               alt="Advanced Propulsion Centre UK"
-              className="h-16 md:h-20 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain hover:opacity-90 transition-opacity drop-shadow-md logo-enhance"
               loading="lazy"
               decoding="async"
             />

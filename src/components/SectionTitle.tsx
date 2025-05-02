@@ -24,7 +24,7 @@ const SectionTitle = ({
   
   return (
     <div className={cn(
-      "max-w-3xl mb-12 md:mb-16",
+      "max-w-3xl mb-8 sm:mb-10 md:mb-12 lg:mb-16",
       alignmentClasses[alignment],
       className
     )}>
@@ -33,11 +33,11 @@ const SectionTitle = ({
           {chip}
         </div>
       )}
-      <h2 className="section-title mb-4 animate-fade-in">
+      <h2 className="section-title mb-3 sm:mb-4 animate-fade-in">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg md:text-xl text-foreground/70 animate-fade-in">
+        <p className="text-base xs:text-lg md:text-xl text-foreground/70 animate-fade-in max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}

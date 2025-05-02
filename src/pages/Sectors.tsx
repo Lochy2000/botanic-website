@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle';
 import CTA from '@/components/CTA';
 import { Building, Truck, Leaf, Plane, Home, Pill, FlaskConical } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn, getImagePath } from '@/lib/utils';
 
 const Sectors = () => {
   const sectors = [
@@ -12,7 +12,7 @@ const Sectors = () => {
       icon: <Building className="h-10 w-10" />,
       title: "Built Environment",
       description: "HVAC systems, district heating/cooling, waste heat recovery.",
-      image: "/botanic-website/assets/images/sectors/built-environment.png",
+      image: getImagePath('assets/images/sectors/built-environment.png'),
       link: "/sectors/built-environment",
       color: "bg-botanicRed text-white"
     },
@@ -20,7 +20,7 @@ const Sectors = () => {
       icon: <Truck className="h-10 w-10" />,
       title: "Transport Refrigeration",
       description: "Zero-emission refrigeration for trucks, vans, and containers.",
-      image: "/botanic-website/assets/images/sectors/transport-refrigeration.png",
+      image: getImagePath('assets/images/sectors/transport-refrigeration.png'),
       link: "/sectors/transport-refrigeration",
       color: "bg-botanicBlue text-white"
     },
@@ -28,7 +28,7 @@ const Sectors = () => {
       icon: <Leaf className="h-10 w-10" />,
       title: "Agri-Tech",
       description: "Precision temperature control for vertical farming and greenhouses.",
-      image: "/botanic-website/assets/images/sectors/agricultor.png",
+      image: getImagePath('assets/images/sectors/agricultor.png'),
       link: "/sectors/agri-tech",
       color: "bg-botanicPurple text-white"
     },
@@ -36,7 +36,7 @@ const Sectors = () => {
       icon: <Plane className="h-10 w-10" />,
       title: "Aerospace & Defence",
       description: "Thermal management for avionics, satellites, and military equipment.",
-      image: "/botanic-website/assets/images/sectors/aviation.png",
+      image: getImagePath('assets/images/sectors/aviation.png'),
       link: "/sectors/aerospace-defence",
       color: "bg-botanicDark text-white"
     },
@@ -44,7 +44,7 @@ const Sectors = () => {
       icon: <Home className="h-10 w-10" />,
       title: "Residential Heating & Cooling",
       description: "Efficient and silent home climate control solutions.",
-      image: "/botanic-website/assets/images/sectors/residential.jpg",
+      image: getImagePath('assets/images/sectors/residential.jpg'),
       link: "/sectors/residential",
       color: "bg-botanicRed text-white"
     },
@@ -52,7 +52,7 @@ const Sectors = () => {
       icon: <FlaskConical className="h-10 w-10" />,
       title: "Medical & Laboratory",
       description: "Precise temperature control for medical devices and lab equipment.",
-      image: "/botanic-website/assets/images/sectors/medical.jpeg",
+      image: getImagePath('assets/images/sectors/medical.jpeg'),
       link: "/sectors/medical-laboratory",
       color: "bg-botanicBlue text-white"
     }
@@ -149,7 +149,7 @@ const Sectors = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-xl animate-fade-in">
             <img 
-              src="/botanic-website/assets/images/sectors/transport-refrigeration.png"
+              src={getImagePath('assets/images/sectors/transport-refrigeration.png')}
               alt="Global Impact" 
               className="w-full h-auto object-cover"
               loading="lazy"

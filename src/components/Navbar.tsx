@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, getImagePath } from '@/lib/utils';
 
 const navLinks = [
   { path: '/', name: 'Home' },
@@ -32,16 +32,14 @@ const Navbar = () => {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
       scrolled ? "bg-white shadow-md text-gray-900" : "bg-transparent text-white"
     )}>
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-20 md:h-24">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 py-1 flex items-center justify-between h-20 sm:h-24 md:h-28 lg:h-32">
         <Link to="/" className="flex items-center">
           <img 
-            src="/botanic-website/assets/images/logo/logo.png" 
+            src={getImagePath('assets/images/logo/logo.png')} 
             alt="Botanic Energy Logo"
-            // Conditionally change logo filter for visibility on dark/light background if needed
             className={cn(
-              "h-10 sm:h-12 md:h-14 w-auto transition-all duration-300",
-              // Example: Add filter if logo visibility is poor on transparent bg
-              // !scrolled ? "brightness-0 invert" : ""
+              "h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 w-auto transition-all duration-300 logo-enhance navbar-logo",
+              !scrolled ? "drop-shadow-lg brightness-125" : ""
             )}
           />
         </Link>
@@ -66,11 +64,11 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2 rounded-full transition-colors text-inherit hover:bg-white/10"
+          className="md:hidden p-1.5 sm:p-2 rounded-full transition-colors text-inherit hover:bg-white/10"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
         </button>
       </div>
 
@@ -78,16 +76,16 @@ const Navbar = () => {
       <div className={cn(
         "md:hidden absolute top-full left-0 right-0 transition-all duration-300 ease-in-out overflow-hidden",
         scrolled ? "bg-white shadow-md" : "bg-black/80 backdrop-blur-md",
-        isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        isOpen ? "max-h-[90vh] opacity-100" : "max-h-0 opacity-0"
       )}>
-        <nav className="flex flex-col px-4 py-4 space-y-1">
+        <nav className="flex flex-col px-3 sm:px-4 py-3 sm:py-4 space-y-1 max-h-[70vh] overflow-y-auto">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               onClick={() => setIsOpen(false)} // Close menu on click
               className={({ isActive }) => cn(
-                "block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200",
+                "block px-3 py-2 rounded-md text-sm sm:text-base font-medium transition-colors duration-200",
                 isActive 
                   ? (scrolled ? "bg-botanicRed/10 text-botanicRed" : "bg-white/20 text-white")
                   : (scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/80 hover:bg-white/10")
