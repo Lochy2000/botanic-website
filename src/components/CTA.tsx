@@ -1,4 +1,5 @@
 import SectionContainer from './SectionContainer';
+import { getImagePath } from '@/lib/utils';
 
 interface CTAProps {
   title: string;
@@ -20,12 +21,12 @@ const CTA = ({
       <SectionContainer className="bg-botanicDark text-white py-12 sm:py-16 md:py-20 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <img 
-            src="/botanic-website/assets/images/logo/logo.png"
+            src={getImagePath('assets/images/logo/logo.png')}
             alt="Botanic Energy Logo"
             className="absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8 h-10 sm:h-14 md:h-16 w-auto opacity-15 drop-shadow-md"
           />
           <img 
-            src="/botanic-website/assets/images/logo/logo.png"
+            src={getImagePath('assets/images/logo/logo.png')}
             alt="Botanic Energy Logo"
             className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 h-12 sm:h-16 md:h-20 w-auto opacity-10 rotate-12 drop-shadow-md"
           />
@@ -48,12 +49,12 @@ const CTA = ({
     <SectionContainer className="bg-botanicLight py-12 sm:py-16 md:py-20 relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <img 
-          src="/botanic-website/assets/images/logo/logo.png"
+          src={getImagePath('assets/images/logo/logo.png')}
           alt="Botanic Energy Logo"
           className="absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8 h-10 sm:h-14 md:h-16 w-auto opacity-15 drop-shadow-md"
         />
         <img 
-          src="/botanic-website/assets/images/logo/logo.png"
+          src={getImagePath('assets/images/logo/logo.png')}
           alt="Botanic Energy Logo"
           className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 h-12 sm:h-16 md:h-20 w-auto opacity-10 rotate-12 drop-shadow-md"
         />

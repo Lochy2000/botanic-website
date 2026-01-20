@@ -13,7 +13,7 @@ const Sectors = () => {
       title: "Built Environment",
       description: "HVAC systems, district heating/cooling, waste heat recovery.",
       image: getImagePath('assets/images/sectors/built-environment.png'),
-      link: "/sectors/built-environment",
+      link: "/technologies/built-environment",
       color: "bg-botanicRed text-white"
     },
     {
@@ -21,7 +21,7 @@ const Sectors = () => {
       title: "Transport Refrigeration",
       description: "Zero-emission refrigeration for trucks, vans, and containers.",
       image: getImagePath('assets/images/sectors/transport-refrigeration.png'),
-      link: "/sectors/transport-refrigeration",
+      link: "/technologies/cold-chain",
       color: "bg-botanicBlue text-white"
     },
     {
@@ -29,7 +29,7 @@ const Sectors = () => {
       title: "Agri-Tech",
       description: "Precision temperature control for vertical farming and greenhouses.",
       image: getImagePath('assets/images/sectors/agricultor.png'),
-      link: "/sectors/agri-tech",
+      link: "/technologies/agri-tech",
       color: "bg-botanicPurple text-white"
     },
     {
@@ -37,7 +37,7 @@ const Sectors = () => {
       title: "Aerospace & Defence",
       description: "Thermal management for avionics, satellites, and military equipment.",
       image: getImagePath('assets/images/sectors/aviation.png'),
-      link: "/sectors/aerospace-defence",
+      link: "/technologies/aviation",
       color: "bg-botanicDark text-white"
     },
     {
@@ -45,7 +45,7 @@ const Sectors = () => {
       title: "Residential Heating & Cooling",
       description: "Efficient and silent home climate control solutions.",
       image: getImagePath('assets/images/sectors/residential.jpg'),
-      link: "/sectors/residential",
+      link: "/technologies/thermal-taps",
       color: "bg-botanicRed text-white"
     },
     {
@@ -53,7 +53,7 @@ const Sectors = () => {
       title: "Medical & Laboratory",
       description: "Precise temperature control for medical devices and lab equipment.",
       image: getImagePath('assets/images/sectors/medical.jpeg'),
-      link: "/sectors/medical-laboratory",
+      link: "/technologies/cold-chain",
       color: "bg-botanicBlue text-white"
     }
   ];

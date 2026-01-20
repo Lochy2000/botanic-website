@@ -8,7 +8,6 @@ const navLinks = [
   { path: '/technology', name: 'Technology' },
   { path: '/sectors', name: 'Sectors' },
   { path: '/about', name: 'About Us' },
-  { path: '/news', name: 'News & Insights' },
   { path: '/contact', name: 'Contact' },
 ];
 

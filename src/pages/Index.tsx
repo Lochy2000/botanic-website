@@ -55,19 +55,19 @@ const Index = () => {
       title: "Built Environment",
       description: "Revolutionizing HVAC in commercial and residential buildings.",
       image: getImagePath('assets/images/index/thermal.jpg'),
-      link: "/sectors/built-environment"
+      link: "/technologies/built-environment"
     },
     {
       title: "Cold Chain Logistics",
       description: "Sustainable, diesel-free refrigeration for transport.",
       image: getImagePath('assets/images/index/coldchain.jpg'),
-      link: "/sectors/transport-refrigeration"
+      link: "/technologies/cold-chain"
     },
     {
       title: "Agri-Tech",
       description: "Precision climate control for modern farming.",
       image: getImagePath('assets/images/index/agri.png'),
-      link: "/sectors/agri-tech"
+      link: "/technologies/agri-tech"
     }
   ];
 
@@ -105,16 +105,16 @@ const Index = () => {
               <Badge className="mb-2 sm:mb-4 bg-botanicRed/80 text-white px-2 xs:px-3 sm:px-4 py-0.5 sm:py-1 text-xs animate-fade-in-up">
                 Redefining Energy Efficiency
               </Badge>
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 xs:mb-4 sm:mb-6 leading-tight animate-fade-in-up animation-delay-200">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 xs:mb-4 sm:mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                 The Future of <br />
                 Heating and Cooling
               </h1>
-              <p className="text-base xs:text-lg md:text-xl lg:text-2xl max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 text-gray-200 animate-fade-in-up animation-delay-400 px-2 xs:px-0">
+              <p className="text-base xs:text-lg md:text-xl lg:text-2xl max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 text-gray-200 animate-fade-in-up px-2 xs:px-0" style={{ animationDelay: '400ms' }}>
                 Revolutionary thermoelectric systems for a zero-carbon future,
                 replacing diesel-powered refrigeration and creating sustainable
                 cold chains worldwide.
               </p>
-              <div className="flex flex-col xs:flex-row justify-center gap-3 sm:gap-4 animate-fade-in-up animation-delay-600 px-4 xs:px-0">
+              <div className="flex flex-col xs:flex-row justify-center gap-3 sm:gap-4 animate-fade-in-up px-4 xs:px-0" style={{ animationDelay: '600ms' }}>
                 <Link to="/technology">
                   <Button size="lg" className="btn-primary w-full sm:w-auto">
                     Explore Our Technology
@@ -166,12 +166,10 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 {features.map((feature, index) => (
-                  <div 
-                    key={index} 
-                    className={cn(
-                      "glass-card p-4 sm:p-6 md:p-7 animate-fade-in hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:bg-white/95",
-                      `delay-[${index * 100}ms]`
-                    )}
+                  <div
+                    key={index}
+                    className="glass-card p-4 sm:p-6 md:p-7 animate-fade-in hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:bg-white/95"
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="mb-4 sm:mb-5 flex justify-center sm:justify-start">
                       {feature.icon}
