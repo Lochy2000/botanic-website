@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    ssgOptions: {
+      dirStyle: 'nested', // Creates /technology/index.html structure for GitHub Pages
+    },
     build: {
       outDir: "docs",
       emptyOutDir: true,
