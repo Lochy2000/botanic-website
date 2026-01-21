@@ -1,8 +1,5 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import type { RouteRecord } from 'vite-react-ssg';
+import RootLayout from './components/RootLayout';
 import Index from "./pages/Index";
 import Technology from "./pages/Technology";
 import Sectors from "./pages/Sectors";
@@ -18,37 +15,27 @@ import AgriTech from "./pages/technologies/AgriTech";
 import ThermalTaps from "./pages/technologies/ThermalTaps";
 import Aviation from "./pages/technologies/Aviation";
 
-const queryClient = new QueryClient();
+export const routes: RouteRecord[] = [
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Index /> },
+      { path: 'technology', element: <Technology /> },
+      { path: 'sectors', element: <Sectors /> },
+      { path: 'about', element: <About /> },
+      { path: 'news', element: <News /> },
+      { path: 'contact', element: <Contact /> },
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <Router basename={import.meta.env.BASE_URL}>
-        <div className="min-h-screen bg-white text-gray-900">
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/sectors" element={<Sectors />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/contact" element={<Contact />} />
-            
-            {/* Technology sub-pages */}
-            <Route path="/technologies/built-environment" element={<BuiltEnvironment />} />
-            <Route path="/technologies/cold-chain" element={<ColdChain />} />
-            <Route path="/technologies/agri-tech" element={<AgriTech />} />
-            <Route path="/technologies/thermal-taps" element={<ThermalTaps />} />
-            <Route path="/technologies/aviation" element={<Aviation />} />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </Router>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      // Technology sub-pages
+      { path: 'technologies/built-environment', element: <BuiltEnvironment /> },
+      { path: 'technologies/cold-chain', element: <ColdChain /> },
+      { path: 'technologies/agri-tech', element: <AgriTech /> },
+      { path: 'technologies/thermal-taps', element: <ThermalTaps /> },
+      { path: 'technologies/aviation', element: <Aviation /> },
 
-export default App;
+      // Catch-all 404 route
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+];

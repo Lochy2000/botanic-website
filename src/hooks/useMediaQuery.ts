@@ -1,32 +1,23 @@
 import { useState, useEffect } from 'react';
 
 export function useMediaQuery(query: string): boolean {
-  // Initialize with the actual value if window is available (client-side)
-  // This prevents hydration mismatch on initial render
-  const getInitialValue = () => {
-    if (typeof window !== 'undefined') {
-      return window.matchMedia(query).matches;
-    }
-    return false;
-  };
-
-  const [matches, setMatches] = useState(getInitialValue);
+  // Always start with false to prevent hydration mismatch
+  // The SSR/pre-rendered HTML will have false, and client will update after hydration
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia(query);
 
-    // Update the state initially (in case getInitialValue wasn't accurate)
+    // Update to the actual value after mount
     setMatches(media.matches);
 
-    // Define a callback function to handle changes
+    // Listen for changes
     const listener = (e: MediaQueryListEvent) => {
       setMatches(e.matches);
     };
 
-    // Add the callback as a listener for changes
     media.addEventListener('change', listener);
 
-    // Clean up
     return () => {
       media.removeEventListener('change', listener);
     };
