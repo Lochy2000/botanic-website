@@ -49,6 +49,8 @@ bontaic-energy-website/
 ├── tsconfig.node.json      # TypeScript config for Node.js scripts (like Vite config)
 └── vite.config.ts          # Vite build tool configuration
 ```
+<img width="1895" height="954" alt="image" src="https://github.com/user-attachments/assets/8a7df878-a411-4846-8a8e-d86ca9a9f0d7" />
+
 
 **Key Configuration Points:**
 
