@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botanic Energy</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // This script takes the current URL path and redirects to index.html
+      // while storing the path in sessionStorage so the React app can restore it
+      var pathSegmentsToKeep = 1; // Keep '/botanic-website' as the base
+      var l = window.location;
+      var pathParts = l.pathname.split('/').filter(Boolean);
+      // Remove the base path segment (botanic-website)
+      var path = pathParts.slice(pathSegmentsToKeep).join('/');
+      var search = l.search;
+      var hash = l.hash;
+
+      // Store the intended path
+      if (path || search || hash) {
+        sessionStorage.setItem('redirect', '/' + path + search + hash);
+      }
+
+      // Redirect to the base URL
+      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/botanic-website/');
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

@@ -14,6 +14,17 @@
     <link rel="stylesheet" crossorigin href="/botanic-website/assets/index.css">
   </head>
   <body>
+    <script>
+      // GitHub Pages SPA redirect handler
+      // Check if there's a redirect path stored from 404.html
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          window.history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>
